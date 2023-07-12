@@ -38,7 +38,7 @@ public class WeatherForecastController : ControllerBase
     [HttpGet("GetWeatherForecast2")]
     // [AllowAnonymous]
     [Authorize]
-    [RequiresClaim(IdentityData.AdminUserClaimName, "truee")]
+    [RequiresClaim(IdentityData.AdminUserClaimName, "true")]
     public IEnumerable<WeatherForecast> GetWeatherForecast2()
     {
         return Enumerable.Range(1, 5).Select(index => new WeatherForecast
